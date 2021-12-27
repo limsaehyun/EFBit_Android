@@ -2,10 +2,17 @@ package com.saehyun.efbit.feature.coin
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.nms_android_v1.base.BaseActivity
+import com.saehyun.efbit.R
+import com.saehyun.efbit.databinding.ActivityCoinDetailBinding
 
-class CoinDetailActivity : AppCompatActivity() {
+class CoinDetailActivity : BaseActivity<ActivityCoinDetailBinding> (
+    R.layout.activity_coin_detail
+) {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_coin_detail)
+    }
+
+    override fun observeEvent() {
     }
 }
