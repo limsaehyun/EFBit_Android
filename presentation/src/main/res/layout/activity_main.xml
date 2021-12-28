@@ -8,6 +8,9 @@
         <variable
             name="activity"
             type="com.saehyun.efbit.feature.main.MainActivity" />
+        <variable
+            name="viewModel"
+            type="com.saehyun.efbit.feature.main.MainViewModel" />
     </data>
 
     <androidx.core.widget.NestedScrollView
