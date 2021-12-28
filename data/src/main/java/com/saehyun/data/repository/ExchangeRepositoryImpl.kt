@@ -1,6 +1,8 @@
 package com.saehyun.data.repository
 
 import com.saehyun.data.remote.datasource.RemoteExchangeDataSource
+import com.saehyun.data.remote.model.ExchangeResponse
+import com.saehyun.data.remote.model.toEntity
 import com.saehyun.data.util.OfflineCacheUtil
 import com.saehyun.domain.entity.exchange.ExchangeEntity
 import com.saehyun.domain.repository.ExchangesRepository
@@ -14,6 +16,6 @@ class ExchangeRepositoryImpl @Inject constructor(
 
     override suspend fun getExchange(): Flow<ExchangeEntity> =
         flow {
-            remoteExchangeDataSource.getExchange()
+            emit(remoteExchangeDataSource.getExchange().toEntity())
         }
 }

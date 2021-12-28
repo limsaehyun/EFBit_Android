@@ -2,6 +2,7 @@ package com.saehyun.data.remote.datasource
 
 import com.saehyun.data.remote.ExchangeAPI
 import com.saehyun.data.remote.model.ExchangeResponse
+import com.saehyun.domain.entity.exchange.ExchangeEntity
 import com.saehyun.domain.handler.ExchangeErrorHandler
 import java.lang.Exception
 import java.net.UnknownHostException

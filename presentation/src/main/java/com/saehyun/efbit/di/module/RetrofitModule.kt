@@ -23,6 +23,7 @@ object RetrofitModule {
     fun provideHttpLoggingInterceptor(): HttpLoggingInterceptor =
         HttpLoggingInterceptor { message -> Log.v("HTTP", message) }
             .setLevel(HttpLoggingInterceptor.Level.BODY)
+
     @Singleton
     @Provides
     fun provideOkHttpClient(
@@ -31,6 +32,7 @@ object RetrofitModule {
         OkHttpClient.Builder()
             .addInterceptor(httpLoggingInterceptor)
             .build()
+
     @Singleton
     @Provides
     fun provideRetrofit(
@@ -41,6 +43,7 @@ object RetrofitModule {
             .client(okHttpClient)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
+
     @Singleton
     @Provides
     fun provideExchangeApi(
