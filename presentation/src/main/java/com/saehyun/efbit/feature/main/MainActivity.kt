@@ -22,6 +22,8 @@ class MainActivity @Inject constructor(
         super.onCreate(savedInstanceState)
 
         setLayoutData()
+
+        mainViewModel.getExchange()
     }
 
     private fun setLayoutData() {
@@ -33,5 +35,14 @@ class MainActivity @Inject constructor(
     }
 
     override fun observeEvent() {
+        mainViewModel.run {
+            data.observe(this@MainActivity, {
+                showToast(it.toString())
+            })
+
+            errorMesssage.observe(this@MainActivity, {
+                showToast(it.toString())
+            })
+        }
     }
 }
