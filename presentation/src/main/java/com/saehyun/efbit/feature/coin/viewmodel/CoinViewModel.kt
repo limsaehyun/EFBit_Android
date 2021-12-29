@@ -1,10 +1,12 @@
-package com.saehyun.efbit.feature.coin
+package com.saehyun.efbit.feature.coin.viewmodel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.saehyun.domain.base.ErrorHandlerEntity
+import com.saehyun.domain.entity.coin.CoinEntity
 import com.saehyun.domain.entity.exchange.ExchangeEntity
+import com.saehyun.domain.usecase.GetCoinUseCase
 import com.saehyun.domain.usecase.GetExchangeUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.collect
@@ -13,15 +15,15 @@ import javax.inject.Inject
 
 @HiltViewModel
 class CoinViewModel @Inject constructor(
-    private val getExchangeUseCase: GetExchangeUseCase
+    private val getCoinUseCase: GetCoinUseCase
 ) : ViewModel() {
-    val data = MutableLiveData<ExchangeEntity>()
+    val data = MutableLiveData<CoinEntity>()
     val errorMesssage = MutableLiveData<String>()
 
-    fun getExchange() {
+    fun getCoin() {
         viewModelScope.launch {
             try {
-                getExchangeUseCase.execute(Unit).collect {
+                getCoinUseCase.execute(Unit).collect {
                     data.value = it
                 }
             } catch (e: ErrorHandlerEntity) {

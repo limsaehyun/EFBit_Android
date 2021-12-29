@@ -16,10 +16,10 @@ import android.content.Intent
 import java.lang.Math.round
 
 
-class MainCoinAdapter(
+class MainExchangeAdapter(
     val context: Context,
     val data: List<Exchange>
-    ) : RecyclerView.Adapter<MainCoinAdapter.Holder>() {
+    ) : RecyclerView.Adapter<MainExchangeAdapter.Holder>() {
 
     private lateinit var binding: ExchangeViewBinding
 
@@ -40,8 +40,8 @@ class MainCoinAdapter(
         binding.run {
             tvCoin.text = data.exchange_id
             tvSubName.text = data.name
-            val volume = round(data.volume_24h*100)/100
-            tvCoinVolume.text = volume.toString()
+            val volume = "%.2f".format(data.volume_24h)
+            tvExchangeValue.text = volume
 
             ivLink.setOnClickListener {
                 val intent = Intent(

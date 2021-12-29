@@ -1,4 +1,4 @@
-package com.saehyun.efbit.feature.coin
+package com.saehyun.efbit.feature.coin.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

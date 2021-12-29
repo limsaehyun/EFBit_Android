@@ -1,11 +1,8 @@
-package com.saehyun.data.remote.datasource
+package com.saehyun.data.remote.datasource.exchange
 
-import com.saehyun.data.remote.ExchangeAPI
+import com.saehyun.data.remote.network.ExchangeAPI
 import com.saehyun.data.remote.model.ExchangeResponse
-import com.saehyun.domain.entity.exchange.ExchangeEntity
 import com.saehyun.domain.handler.ExchangeErrorHandler
-import java.lang.Exception
-import java.net.UnknownHostException
 import javax.inject.Inject
 
 class RemoteExchangeDataSourceImpl @Inject constructor(
