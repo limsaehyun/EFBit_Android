@@ -28,7 +28,7 @@
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_marginStart="18dp"
-            android:src="@drawable/menu"
+            android:src="@drawable/ic_back"
             app:layout_constraintBottom_toBottomOf="@+id/view11"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/view11" />
@@ -92,7 +92,7 @@
             app:layout_constraintTop_toBottomOf="@+id/view16" />
 
         <TextView
-            android:id="@+id/textView12"
+            android:id="@+id/tvTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
@@ -106,6 +106,7 @@
             app:layout_constraintTop_toTopOf="@+id/view14" />
 
         <TextView
+            android:id="@+id/tvCoinSubName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="44dp"
@@ -116,7 +117,7 @@
             app:layout_constraintEnd_toEndOf="@+id/view14"
             app:layout_constraintHorizontal_bias="0.46"
             app:layout_constraintStart_toStartOf="@+id/view14"
-            app:layout_constraintTop_toTopOf="@+id/textView12" />
+            app:layout_constraintTop_toTopOf="@+id/tvTitle" />
 
         <TextView
             android:id="@+id/textView13"
@@ -138,7 +139,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
             android:fontFamily="@font/noto_sans_kr_medium"
-            android:text="Value"
+            android:text="Volume"
             android:textColor="@color/black"
             android:textSize="16dp"
             app:layout_constraintEnd_toEndOf="@+id/view14"
@@ -175,6 +176,7 @@
             app:layout_constraintTop_toBottomOf="@+id/view14" />
 
         <TextView
+            android:id="@+id/tvCoinPercent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="28dp"
@@ -232,7 +234,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:fontFamily="@font/noto_sans_kr_medium"
-            android:text="0"
+            android:text="X"
             android:textColor="#555555"
             android:textSize="14dp"
             app:layout_constraintEnd_toEndOf="@+id/textView16"
@@ -241,6 +243,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView14" />
 
         <TextView
+            android:id="@+id/tvCoin24HChanged"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -260,7 +263,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:fontFamily="@font/noto_sans_kr_medium"
-            android:text="0"
+            android:text="X"
             android:textColor="#555555"
             android:textSize="14dp"
             app:layout_constraintEnd_toEndOf="@+id/textView18"
@@ -269,6 +272,7 @@
             app:layout_constraintTop_toTopOf="@+id/textView18" />
 
         <TextView
+            android:id="@+id/tvCoinValue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/noto_sans_kr_medium"

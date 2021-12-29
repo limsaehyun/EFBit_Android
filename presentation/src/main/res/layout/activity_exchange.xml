@@ -51,30 +51,15 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/view6" />
 
-        <View
-            android:id="@+id/view7"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginEnd="30dp"
-            android:background="@drawable/main_coin_border"
-            android:paddingTop="27dp"
-            app:layout_constraintBottom_toBottomOf="@+id/rvExchange"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/view6" />
-
 
         <androidx.recyclerview.widget.RecyclerView
-            android:paddingBottom="32dp"
             android:id="@+id/rvExchange"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="68dp"
+            android:layout_marginTop="56dp"
+            android:paddingBottom="32dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.454"
-            app:layout_constraintStart_toStartOf="@+id/view7"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/view6" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
