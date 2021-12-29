@@ -15,10 +15,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EFBit">
         <activity
-            android:name=".feature.coin.CoinDetailActivity"
+            android:name=".feature.coin.ui.CoinDetailActivity"
             android:exported="false" />
         <activity
-            android:name=".feature.coin.CoinActivity"
+            android:name=".feature.coin.ui.CoinActivity"
             android:exported="false" />
         <activity
             android:name=".feature.exchange.ExchangeActivity"

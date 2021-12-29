@@ -8,7 +8,7 @@ import com.saehyun.domain.entity.exchange.Exchange
 import com.saehyun.domain.entity.exchange.ExchangeEntity
 import com.saehyun.efbit.R
 import com.saehyun.efbit.databinding.ActivityExchangeBinding
-import com.saehyun.efbit.feature.main.adapter.MainCoinAdapter
+import com.saehyun.efbit.feature.main.adapter.MainExchangeAdapter
 import com.saehyun.efbit.feature.main.viewmodel.MainViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
@@ -48,7 +48,7 @@ class ExchangeActivity @Inject constructor(
         binding.run {
             binding.rvExchange.layoutManager = GridLayoutManager(this@ExchangeActivity, 2)
             binding.rvExchange.setHasFixedSize(true)
-            binding.rvExchange.adapter= MainCoinAdapter(applicationContext, data)
+            binding.rvExchange.adapter= MainExchangeAdapter(applicationContext, data)
         }
     }
 
