@@ -1,6 +1,8 @@
 package com.saehyun.efbit.di.module
 
+import com.saehyun.data.repository.CoinRepositoryImpl
 import com.saehyun.data.repository.ExchangeRepositoryImpl
+import com.saehyun.domain.repository.CoinRepository
 import com.saehyun.domain.repository.ExchangesRepository
 import dagger.Binds
 import dagger.Module
@@ -18,4 +20,9 @@ abstract class RepositoryModule {
     abstract fun bindExchangeRepositoryImpl(
         exchangeRepositoryImpl: ExchangeRepositoryImpl
     ): ExchangesRepository
+
+    @Binds
+    abstract fun bindCoinRepositoryImpl(
+        coinRepositoryImpl: CoinRepositoryImpl
+    ): CoinRepository
 }
