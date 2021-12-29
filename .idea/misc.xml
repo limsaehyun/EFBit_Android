@@ -22,7 +22,7 @@
         <entry key="presentation/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="presentation/src/main/res/layout/activity_splash.xml" value="0.19427083333333334" />
         <entry key="presentation/src/main/res/layout/coin_item.xml" value="0.335" />
-        <entry key="presentation/src/main/res/layout/coin_view.xml" value="0.31242589782415736" />
+        <entry key="presentation/src/main/res/layout/coin_view.xml" value="0.5" />
         <entry key="presentation/src/main/res/layout/exchange_view.xml" value="0.35450236966824644" />
       </map>
     </option>

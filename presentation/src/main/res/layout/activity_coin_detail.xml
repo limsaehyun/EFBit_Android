@@ -7,13 +7,13 @@
     <data>
         <variable
             name="activity"
-            type="com.saehyun.efbit.feature.coin.CoinDetailActivity" />
+            type="com.saehyun.efbit.feature.coin.ui.CoinDetailActivity" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".feature.coin.CoinDetailActivity">
+        tools:context=".feature.coin.ui.CoinDetailActivity">
         <View
             android:id="@+id/view11"
             android:layout_width="0dp"

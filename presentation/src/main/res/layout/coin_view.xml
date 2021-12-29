@@ -7,7 +7,7 @@
     <data>
         <variable
             name="item"
-            type="com.saehyun.efbit.feature.main.adapter.MainCoinAdapter" />
+            type="com.saehyun.efbit.feature.main.adapter.MainExchangeAdapter" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -38,20 +38,34 @@
             android:id="@+id/tvCoinName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
+            android:layout_marginStart="36dp"
             android:fontFamily="@font/noto_sans_kr_bold"
             android:text="COIN"
             android:textColor="#F6F6F6"
             android:textSize="16dp"
             app:layout_constraintBottom_toBottomOf="@+id/view13"
             app:layout_constraintStart_toStartOf="@+id/view12"
-            app:layout_constraintTop_toTopOf="@+id/view13" />
+            app:layout_constraintTop_toTopOf="@+id/view12" />
 
         <TextView
-            android:id="@+id/tvCoinVolume"
+            android:id="@+id/tvCoinExchange"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
+            android:fontFamily="@font/noto_sans_kr_bold"
+            android:text="exchange"
+            android:textColor="#E7E7E7"
+            android:textSize="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/view13"
+            app:layout_constraintEnd_toEndOf="@+id/tvCoinName"
+            app:layout_constraintStart_toStartOf="@+id/tvCoinName"
+            app:layout_constraintTop_toTopOf="@+id/view13"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/tvCoinPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
             android:fontFamily="@font/noto_sans_kr_medium"
             android:text="0.0$"
             android:textColor="#F6F6F6"
