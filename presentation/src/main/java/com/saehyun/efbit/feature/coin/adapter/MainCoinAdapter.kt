@@ -13,6 +13,8 @@ import com.saehyun.efbit.databinding.ExchangeViewBinding
 import android.net.Uri
 
 import android.content.Intent
+import android.content.SharedPreferences
+import android.preference.PreferenceManager
 import android.util.Log
 import com.saehyun.domain.entity.coin.Market
 import com.saehyun.efbit.databinding.CoinViewBinding
@@ -35,6 +37,7 @@ class MainCoinAdapter(
             LayoutInflater.from(parent.context),
             R.layout.coin_view, parent, false
         )
+
         return Holder(binding.root)
     }
 
@@ -48,7 +51,10 @@ class MainCoinAdapter(
             tvCoinPercent.text = "%.2f".format(data.change_24h)
 
             holder.itemView.setOnClickListener {
-                holder.itemView.context.startActivity(Intent(context, CoinDetailActivity::class.java))
+                val intent = Intent(context, CoinDetailActivity::class.java)
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                intent.putExtra("data", data)
+                holder.itemView.context.startActivity(intent)
             }
         }
     }
@@ -56,4 +62,5 @@ class MainCoinAdapter(
     override fun getItemCount(): Int {
         return data.size
     }
+
 }
