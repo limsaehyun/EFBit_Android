@@ -8,6 +8,9 @@
         <variable
             name="activity"
             type="com.saehyun.efbit.feature.exchange.ExchangeActivity" />
+        <variable
+            name="viewModel"
+            type="com.saehyun.efbit.feature.main.viewmodel.MainViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -25,6 +28,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
+            android:id="@+id/ivExchangeBack"
             android:layout_width="11.6dp"
             android:layout_height="19.8dp"
             android:layout_marginStart="16dp"
@@ -56,7 +60,7 @@
             android:layout_marginEnd="30dp"
             android:background="@drawable/main_coin_border"
             android:paddingTop="27dp"
-            app:layout_constraintBottom_toBottomOf="@+id/recyclerView2"
+            app:layout_constraintBottom_toBottomOf="@+id/rvExchange"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/view6" />
@@ -64,7 +68,7 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:paddingBottom="32dp"
-            android:id="@+id/recyclerView2"
+            android:id="@+id/rvExchange"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="68dp"

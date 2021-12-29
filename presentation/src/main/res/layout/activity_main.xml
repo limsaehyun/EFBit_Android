@@ -7,10 +7,10 @@
     <data>
         <variable
             name="activity"
-            type="com.saehyun.efbit.feature.main.MainActivity" />
+            type="com.saehyun.efbit.feature.main.ui.MainActivity" />
         <variable
             name="viewModel"
-            type="com.saehyun.efbit.feature.main.MainViewModel" />
+            type="com.saehyun.efbit.feature.main.viewmodel.MainViewModel" />
     </data>
 
     <androidx.core.widget.NestedScrollView
@@ -18,14 +18,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/white"
-        tools:context=".feature.main.MainActivity">
+        tools:context=".feature.main.ui.MainActivity">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginBottom="16dp"
             android:background="@color/white"
-            tools:context=".feature.main.MainActivity">
+            tools:context=".feature.main.ui.MainActivity">
 
             <View
                 android:id="@+id/view"
@@ -76,90 +75,68 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/view" />
 
-            <View
-                android:id="@+id/view2"
-                android:layout_width="300dp"
-                android:layout_height="250dp"
-                android:layout_marginTop="12dp"
-                android:background="@drawable/main_coin_border"
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:nestedScrollingEnabled="false"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.495"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recyclerView"
-                android:nestedScrollingEnabled="false"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_marginStart="25dp"
-                android:layout_marginTop="24dp"
-                android:layout_marginEnd="25dp"
-                android:layout_marginBottom="32dp"
-                app:layout_constraintBottom_toBottomOf="@+id/view2"
-                app:layout_constraintEnd_toEndOf="@+id/view2"
-                app:layout_constraintStart_toStartOf="@+id/view2"
-                app:layout_constraintTop_toTopOf="@+id/view2" />
 
             <TextView
+                android:id="@+id/rvMainCoinMore"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="24dp"
-                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="40dp"
                 android:text="더보기"
                 android:textColor="#3A3A3A"
                 android:textSize="16dp"
-                app:layout_constraintBottom_toBottomOf="@+id/view2"
-                app:layout_constraintEnd_toEndOf="@+id/view2" />
-
+                app:layout_constraintBottom_toBottomOf="@+id/textView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textView"
+                app:layout_constraintVertical_bias="0.625" />
 
             <TextView
                 android:id="@+id/textView5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="40dp"
                 android:fontFamily="@font/noto_sans_kr_medium"
-                android:text="화폐 정보"
+                android:text="거래소 정보"
                 android:textColor="#3A3A3A"
                 android:textSize="16dp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/view2" />
-
-            <View
-                android:id="@+id/view5"
-                android:layout_width="300dp"
-                android:layout_height="300dp"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/main_coin_border"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView5" />
+                app:layout_constraintTop_toBottomOf="@+id/recyclerView" />
 
             <androidx.recyclerview.widget.RecyclerView
-                android:nestedScrollingEnabled="false"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginEnd="30dp"
-                android:layout_marginBottom="40dp"
-                app:layout_constraintBottom_toBottomOf="@+id/view5"
-                app:layout_constraintEnd_toEndOf="@+id/view5"
-                app:layout_constraintStart_toStartOf="@+id/view5"
-                app:layout_constraintTop_toTopOf="@+id/view5" />
-
-
-            <TextView
+                android:id="@+id/rvMainExchange"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="24dp"
-                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:nestedScrollingEnabled="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView5"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/tvExchangeMore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="40dp"
                 android:text="더보기"
                 android:textColor="#3A3A3A"
                 android:textSize="16dp"
-                app:layout_constraintBottom_toBottomOf="@+id/view5"
-                app:layout_constraintEnd_toEndOf="@+id/view5" />
+                app:layout_constraintBottom_toBottomOf="@+id/textView5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textView5"
+                app:layout_constraintVertical_bias="0.458" />
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
