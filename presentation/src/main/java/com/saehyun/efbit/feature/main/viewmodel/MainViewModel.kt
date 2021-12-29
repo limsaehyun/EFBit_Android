@@ -1,6 +1,5 @@
-package com.saehyun.efbit.feature.main
+package com.saehyun.efbit.feature.main.viewmodel
 
-import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -23,12 +22,10 @@ class MainViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 getExchangeUseCase.execute(Unit).collect {
-                    Log.d("Main", "getExchange: ")
                     data.value = it
                 }
             } catch (e: ErrorHandlerEntity) {
                 errorMesssage.value = e.sendMessage
-                Log.d("Main", "getExchange: ")
             }
 
         }

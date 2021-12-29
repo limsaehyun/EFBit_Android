@@ -4,7 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.saehyun.efbit.R
-import com.saehyun.efbit.feature.main.MainActivity
+import com.saehyun.efbit.feature.main.ui.MainActivity
 
 class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
