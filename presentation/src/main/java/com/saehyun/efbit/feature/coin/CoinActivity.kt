@@ -7,7 +7,7 @@ import com.saehyun.efbit.R
 import com.saehyun.efbit.databinding.ActivityCoinBinding
 
 class CoinActivity : BaseActivity<ActivityCoinBinding>(
-    R.layout.coin_item
+    R.layout.activity_coin
 ){
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
