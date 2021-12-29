@@ -1,5 +1,7 @@
 package com.saehyun.domain.entity.coin
 
+import java.io.Serializable
+
 data class Market(
     val base_asset: String,
     val change_24h: Double,
@@ -13,4 +15,4 @@ data class Market(
     val symbol: String,
     val updated_at: String,
     val volume_24h: Double
-)
+) : Serializable
