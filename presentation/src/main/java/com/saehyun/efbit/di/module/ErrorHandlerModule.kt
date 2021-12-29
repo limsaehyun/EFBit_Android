@@ -1,6 +1,8 @@
 package com.saehyun.efbit.di.module
 
+import com.saehyun.data.handler.CoinErrorHandlerImpl
 import com.saehyun.data.handler.ExchangeErrorHandlerImpl
+import com.saehyun.domain.handler.CoinErrorHandler
 import com.saehyun.domain.handler.ExchangeErrorHandler
 import dagger.Module
 import dagger.Provides
@@ -14,5 +16,9 @@ object ErrorHandlerModule {
 
     @Singleton
     @Provides
-    fun errorHandler() : ExchangeErrorHandler = ExchangeErrorHandlerImpl()
+    fun exchangeErrorHandler() : ExchangeErrorHandler = ExchangeErrorHandlerImpl()
+
+    @Singleton
+    @Provides
+    fun coinErrorHandler() : CoinErrorHandler = CoinErrorHandlerImpl()
 }
