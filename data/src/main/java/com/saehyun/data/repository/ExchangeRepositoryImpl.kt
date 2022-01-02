@@ -2,6 +2,7 @@ package com.saehyun.data.repository
 
 import com.saehyun.data.local.datasource.LocalExchangeDataSource
 import com.saehyun.data.local.entitiy.toEntity
+import com.saehyun.data.local.entitiy.toRoomEntity
 import com.saehyun.data.remote.datasource.exchange.RemoteExchangeDataSource
 import com.saehyun.data.remote.model.toEntity
 import com.saehyun.data.util.OfflineCacheUtil
@@ -17,9 +18,9 @@ class ExchangeRepositoryImpl @Inject constructor(
 ) : ExchangesRepository {
 
     override suspend fun getExchange(): Flow<ExchangeEntity> =
-        OfflineCacheUtil<ExchangeEntity>
+        OfflineCacheUtil<ExchangeEntity>()
             .remoteData { remoteExchangeDataSource.getExchange().toEntity() }
             .localData { localExchangeDataSource.getExchange().toEntity() }
-            .doOnNeedRefresh { localExchangeDataSource.updateExchange() }
+            .doOnNeedRefresh { localExchangeDataSource.updateExchange(it.toRoomEntity()) }
             .createFlow()
 }
