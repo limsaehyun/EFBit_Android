@@ -19,3 +19,8 @@ fun ExchangeRoomEntity.toEntity(): ExchangeEntity =
     ExchangeEntity(
         this.exchange
     )
+
+fun ExchangeEntity.toRoomEntity(userId: String) =
+    ExchangeRoomEntity(
+        this.exchanges
+    )
