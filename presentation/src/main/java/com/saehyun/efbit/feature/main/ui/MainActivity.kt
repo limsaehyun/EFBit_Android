@@ -86,10 +86,12 @@ class MainActivity @Inject constructor(
     }
 
     private fun setCoinRecyclerviewData(data: CoinEntity) {
-        for(i: Int in 1..4) {
-            coinData.add(data.markets.get(i))
+        if(data.markets.size >= 4) {
+            for (i: Int in 0..3) {
+                coinData.add(data.markets.get(i))
+            }
+            binding.rvCoinMain.adapter?.notifyDataSetChanged()
         }
-        binding.rvCoinMain.adapter?.notifyDataSetChanged()
     }
 
     override fun observeEvent() {

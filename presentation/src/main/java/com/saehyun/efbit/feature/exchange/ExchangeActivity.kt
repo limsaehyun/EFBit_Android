@@ -53,10 +53,12 @@ class ExchangeActivity @Inject constructor(
     }
 
     private fun setRecyclerviewData(data: ExchangeEntity) {
-        for(i: Int in 1..data.exchanges.size-1) {
-            this.data.add(data.exchanges.get(i))
+        if(data.exchanges.size != 0) {
+            for (i: Int in 1..data.exchanges.size - 1) {
+                this.data.add(data.exchanges.get(i))
+            }
+            binding.rvExchange.adapter?.notifyDataSetChanged()
         }
-        binding.rvExchange.adapter?.notifyDataSetChanged()
     }
 
     override fun observeEvent() {
