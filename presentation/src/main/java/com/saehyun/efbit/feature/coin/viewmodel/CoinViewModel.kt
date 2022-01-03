@@ -5,9 +5,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.saehyun.domain.base.ErrorHandlerEntity
 import com.saehyun.domain.entity.coin.CoinEntity
-import com.saehyun.domain.entity.exchange.ExchangeEntity
 import com.saehyun.domain.usecase.GetCoinUseCase
-import com.saehyun.domain.usecase.GetExchangeUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch

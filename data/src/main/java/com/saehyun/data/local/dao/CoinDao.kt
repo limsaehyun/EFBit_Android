@@ -2,7 +2,6 @@ package com.saehyun.data.local.dao
 
 import androidx.room.*
 import com.saehyun.data.local.entitiy.CoinRoomEntity
-import com.saehyun.data.local.entitiy.ExchangeRoomEntity
 
 @Dao
 interface CoinDao {

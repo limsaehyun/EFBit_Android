@@ -12,7 +12,6 @@ import com.saehyun.domain.entity.exchange.Exchange
 import com.saehyun.domain.entity.exchange.ExchangeEntity
 import com.saehyun.efbit.R
 import com.saehyun.efbit.databinding.ActivityMainBinding
-import com.saehyun.efbit.databinding.CoinViewBinding
 import com.saehyun.efbit.feature.coin.adapter.MainCoinAdapter
 import com.saehyun.efbit.feature.coin.ui.CoinActivity
 import com.saehyun.efbit.feature.coin.viewmodel.CoinViewModel

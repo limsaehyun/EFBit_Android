@@ -15,6 +15,7 @@ import javax.inject.Inject
 class MainViewModel @Inject constructor(
     private val getExchangeUseCase: GetExchangeUseCase
 ) : ViewModel() {
+
     val data = MutableLiveData<ExchangeEntity>()
     val errorMesssage = MutableLiveData<String>()
 

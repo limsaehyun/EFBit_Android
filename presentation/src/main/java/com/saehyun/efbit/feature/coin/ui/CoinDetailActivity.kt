@@ -1,10 +1,6 @@
 package com.saehyun.efbit.feature.coin.ui
 
-import android.content.ContentValues.TAG
-import android.graphics.Path
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import com.example.nms_android_v1.base.BaseActivity
 import com.saehyun.domain.entity.coin.Market
 import com.saehyun.efbit.R

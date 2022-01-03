@@ -1,13 +1,9 @@
 package com.saehyun.data.local.datasource
 
 import com.saehyun.data.local.dao.CoinDao
-import com.saehyun.data.local.dao.ExchangeDao
 import com.saehyun.data.local.entitiy.CoinRoomEntity
-import com.saehyun.data.local.entitiy.ExchangeRoomEntity
-import com.saehyun.data.local.entitiy.toEntity
 import com.saehyun.data.local.entitiy.toMarket
 import com.saehyun.domain.entity.coin.CoinEntity
-import com.saehyun.domain.entity.exchange.ExchangeEntity
 import javax.inject.Inject
 
 class LocalCoinDataSourceImpl @Inject constructor(

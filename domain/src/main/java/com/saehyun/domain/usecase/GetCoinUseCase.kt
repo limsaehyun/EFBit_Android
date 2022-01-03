@@ -2,9 +2,7 @@ package com.saehyun.domain.usecase
 
 import com.saehyun.domain.base.UseCase
 import com.saehyun.domain.entity.coin.CoinEntity
-import com.saehyun.domain.entity.exchange.ExchangeEntity
 import com.saehyun.domain.repository.CoinRepository
-import com.saehyun.domain.repository.ExchangesRepository
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 

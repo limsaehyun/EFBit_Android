@@ -6,20 +6,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.saehyun.domain.entity.exchange.Exchange
 import com.saehyun.efbit.R
-import com.saehyun.efbit.databinding.ExchangeViewBinding
-
-import android.net.Uri
-
 import android.content.Intent
-import android.content.SharedPreferences
-import android.preference.PreferenceManager
-import android.util.Log
 import com.saehyun.domain.entity.coin.Market
 import com.saehyun.efbit.databinding.CoinViewBinding
 import com.saehyun.efbit.feature.coin.ui.CoinDetailActivity
-import java.lang.Math.round
 
 
 class MainCoinAdapter(

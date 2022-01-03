@@ -9,11 +9,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.saehyun.domain.entity.exchange.Exchange
 import com.saehyun.efbit.R
 import com.saehyun.efbit.databinding.ExchangeViewBinding
-
 import android.net.Uri
-
 import android.content.Intent
-import java.lang.Math.round
 
 
 class MainExchangeAdapter(
