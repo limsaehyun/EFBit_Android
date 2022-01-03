@@ -20,7 +20,7 @@ class ExchangeRepositoryImpl @Inject constructor(
     override suspend fun getExchange(): Flow<ExchangeEntity> =
         OfflineCacheUtil<ExchangeEntity>()
             .remoteData { remoteExchangeDataSource.getExchange().toEntity() }
-            .localData { localExchangeDataSource.getExchange().toEntity() }
+            .localData { localExchangeDataSource.getExchange() }
             .doOnNeedRefresh { localExchangeDataSource.updateExchange(it.toRoomEntity()) }
             .createFlow()
 }

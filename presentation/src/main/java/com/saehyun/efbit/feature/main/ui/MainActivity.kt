@@ -76,9 +76,12 @@ class MainActivity @Inject constructor(
     }
 
     private fun setExchangeRecyclerviewData(data: ExchangeEntity) {
-        for(i: Int in 1..4) {
-            exchangeData.add(data.exchanges.get(i))
+        if(data.exchanges.size >= 4) {
+            for(i: Int in 0..3) {
+                exchangeData.add(data.exchanges.get(i))
+            }
         }
+
         binding.rvMainExchange.adapter?.notifyDataSetChanged()
     }
 
