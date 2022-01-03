@@ -2,11 +2,8 @@ package com.saehyun.data.local.entitiy
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import androidx.room.TypeConverters
-import com.saehyun.data.local.database.Converters
 import com.saehyun.domain.entity.exchange.Exchange
 import com.saehyun.domain.entity.exchange.ExchangeEntity
-import java.io.Serializable
 
 @Entity(tableName = "exchange_room")
 

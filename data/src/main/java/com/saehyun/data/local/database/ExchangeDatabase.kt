@@ -13,7 +13,6 @@ import com.saehyun.data.local.entitiy.ExchangeRoomEntity
     exportSchema = false
 )
 
-@TypeConverters(Converters::class)
 abstract class ExchangeDatabase: RoomDatabase() {
     abstract fun exchangeDao() : ExchangeDao
 }
