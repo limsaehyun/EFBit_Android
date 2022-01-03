@@ -8,7 +8,7 @@ data class CoinResponse(
     val markets: List<Market>
 )
 
-fun CoinResponse.toEntity(): CoinEntity =
+fun CoinResponse.toMarket(): CoinEntity =
     CoinEntity(
         this.markets
     )
