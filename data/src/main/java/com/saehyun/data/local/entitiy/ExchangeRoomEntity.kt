@@ -2,25 +2,44 @@ package com.saehyun.data.local.entitiy
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import com.saehyun.data.remote.model.ExchangeResponse
-import com.saehyun.domain.entity.coin.CoinEntity
-import com.saehyun.domain.entity.coin.Market
+import androidx.room.TypeConverters
+import com.saehyun.data.local.database.Converters
 import com.saehyun.domain.entity.exchange.Exchange
 import com.saehyun.domain.entity.exchange.ExchangeEntity
+import java.io.Serializable
 
-@Entity
+@Entity(tableName = "exchange_room")
+
 data class ExchangeRoomEntity(
-    val exchange: List<Exchange>
+    val exchange_id: String,
+    val name: String,
+    val volume_24h: Double,
+    val website: String
 ) {
     @PrimaryKey(autoGenerate = true) var id: Int = 0
 }
 
-fun ExchangeRoomEntity.toEntity(): ExchangeEntity =
-    ExchangeEntity(
-        this.exchange
+fun ExchangeRoomEntity.toExchange() =
+    Exchange(
+        this.exchange_id,
+        this.name,
+        this.volume_24h,
+        this.website
     )
 
-fun ExchangeEntity.toRoomEntity(userId: String) =
-    ExchangeRoomEntity(
-        this.exchanges
+fun List<ExchangeRoomEntity>.toEntity(): ExchangeEntity =
+    ExchangeEntity(
+        this.map { it.toExchange() }
     )
+
+fun Exchange.toRoomEntity() =
+    ExchangeRoomEntity(
+        exchange_id,
+        name,
+        volume_24h,
+        website
+    )
+
+
+fun ExchangeEntity.toRoomEntity() =
+    this.exchanges.map { it.toRoomEntity() }
