@@ -26,7 +26,7 @@ EFBit는 쉽고 빠르게 암호화폐 정보를 조회할 수 있는 서비스�
 - targetSdkVersion : 31
 
 ## Tech
-- **Clean Architecture**, Couroutines, Hilt, MVVM, AAC, OkHttp, Room, Retrofit2, Glide
+- **Clean Architecture**, Coroutine, Hilt, MVVM, AAC, OkHttp, Room, Retrofit2, Glide
 
 ## Screenshot
 <img src="https://user-images.githubusercontent.com/80076029/148011773-ad7cc9ef-9272-4bb4-8bfa-f0990e441856.png" width="180px" height="380px"></img>
